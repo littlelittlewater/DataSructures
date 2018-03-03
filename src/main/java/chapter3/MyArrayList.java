@@ -80,6 +80,8 @@ public class MyArrayList<T> implements Iterable<T> {
         return new MyIterater();
     }
 
+
+
     public  class  MyIterater implements Iterator{
         int cur = 0 ;
         public boolean hasNext() {
@@ -89,7 +91,7 @@ public class MyArrayList<T> implements Iterable<T> {
 
         public Object next() {
             assert cur < size();
-            return arr[cur];
+            return arr[cur++];
         }
 
         public void remove() {
